@@ -52,12 +52,12 @@
 					<message>Maven artifacts for ${project.version}</message>
 					<noJekyll>true</noJekyll>
 					<outputDirectory>${project.build.directory}</outputDirectory>
-					<branch>refs/heads/master</branch>
+					<branch>refs/heads/main</branch>
 					<includes>
 						<include>**/*</include>
 					</includes>
 					<merge>true</merge>
-					<repositoryName>api-documentation</repositoryName>
+					<repositoryName>my-artifact-repository</repositoryName>
 					<repositoryOwner>divyaapaduvalli</repositoryOwner>
 					<server>github</server>
 				</configuration>
@@ -74,11 +74,10 @@
 	</build>
 	<repositories>
 		<repository>
-			<id>PROJECT-REPO-URL</id>
-			<url>https://github.com/divyaapaduvalli/my-maven-modules/master</url>
+			<id>github</id>
+			<url>https://maven.pkg.github.com/divyaapaduvalli/my-artifact-repository</url>
 			<snapshots>
 				<enabled>true</enabled>
-				<updatePolicy>always</updatePolicy>
 			</snapshots>
 		</repository>
 	</repositories>
