@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.divyaa</groupId>
 	<artifactId>api-documentation</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>api-documentation</name>
 	<description>Demo project for spring doc </description>
 	<properties>
@@ -32,9 +32,10 @@
 	</dependencies>
 	<distributionManagement>
 		<repository>
-			<id>internal.repo</id>
-			<name>Temporary Staging Repository</name>
-			<url>file://${project.build.directory}/mvn-artifact</url>
+			<id>gitHub-release</id>
+			<name>GitHub release</name>
+			<url>https://maven.pkg.github.com/divyaapaduvalli/my-artifact-repository/</url>
+			<uniqueVersion>false</uniqueVersion>
 		</repository>
 	</distributionManagement>
 
@@ -44,41 +45,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
-				<groupId>com.github.github</groupId>
-				<artifactId>site-maven-plugin</artifactId>
-				<version>0.12</version>
-				<configuration>
-					<message>Maven artifacts for ${project.version}</message>
-					<noJekyll>true</noJekyll>
-					<outputDirectory>${project.build.directory}</outputDirectory>
-					<branch>refs/heads/main</branch>
-					<includes>
-						<include>**/*</include>
-					</includes>
-					<merge>true</merge>
-					<repositoryName>my-artifact-repository</repositoryName>
-					<repositoryOwner>divyaapaduvalli</repositoryOwner>
-					<server>github</server>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>site</goal>
-						</goals>
-						<phase>deploy</phase>
-					</execution>
-				</executions>
-			</plugin>
 		</plugins>
 	</build>
-	<repositories>
-		<repository>
-			<id>github</id>
-			<url>https://maven.pkg.github.com/divyaapaduvalli/my-artifact-repository</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
 </project>
