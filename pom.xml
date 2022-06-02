@@ -34,7 +34,7 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub divyaapaduvalli Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/divyaapaduvalli/my-artifcts</url>
+			<url>https://maven.pkg.github.com/divyaapaduvalli/my-artifacts</url>
 		</repository>
 	</distributionManagement>
 
