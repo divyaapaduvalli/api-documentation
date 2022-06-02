@@ -32,10 +32,9 @@
 	</dependencies>
 	<distributionManagement>
 		<repository>
-			<id>gitHub-release</id>
-			<name>GitHub release</name>
-			<url>https://maven.pkg.github.com/divyaapaduvalli/my-artifact-repository/</url>
-			<uniqueVersion>false</uniqueVersion>
+			<id>github</id>
+			<name>GitHub divyaapaduvalli Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/divyaapaduvalli/api-documentation</url>
 		</repository>
 	</distributionManagement>
 
